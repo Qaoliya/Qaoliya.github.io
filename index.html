@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h1>JIMOH QAOLIYA</h1>
+        <ul class="navigation">
+            <li><a href="https://wa.me/08083905814" class="nav-link">WhatsApp</a></li>
+            <li><a href="mailto:abolakunbi@gmail.com" class="nav-link">Email</a></li>
+            <!-- <li><a href="#about" class="nav-link">About</a></li> -->
+        </ul>
+        <button class="burger-menu" id="burger-menu"> 
+            <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
+    </nav>
+    <section class="hero" id="about">
+        <img
+        src="C:\Users\Hamza\Documents\cv\IMG_4546.jpeg"
+        alt="qaoliya-jimoh"
+        loading="lazy"
+        class="hero-img"
+        />
+        <div class="bio">
+            <h2 class="bio-title">About Me</h2>
+            <p class="bio-text">
+                My name is Jimoh Qaoliya. I am an undergruate student of the University of Ilorin. 
+                I'm currently in 300 level studying Computer Science(B.sc). I am from Offa, Kwara state.
+                I was born on the 28th of April 2024.
+            </p>
+        </div>
+    </section>
+    <!-- <div>
+        <h2 class="Friend">My Friends and I</h2>
+    </div> -->
+     <section class="try">
+        <div id="parent-container">
+           <div class="navigation-buttons">
+            <div class="previous nav-btn"><</div>
+            <div class="next nav-btn">></div>
+           </div> 
+           <div class="slider-carousel">
+            <div class="images main">
+                <img src="C:\Users\Hamza\Documents\cv\WhatsApp Image 2024-03-08 at 11.30.32 PM.jpeg" />
+                
+            </div>
+            <div class="images main">
+                <img src="C:\Users\Hamza\Documents\cv\WhatsApp Image 2024-03-08 at 11.30.32 PM (1).jpeg" />
+                
+            </div>
+            <div class="images main">
+                <img src="C:\Users\Hamza\Documents\cv\WhatsApp Image 2024-03-08 at 11.30.32 PM (2).jpeg" />
+                
+            </div>
+            <div class="images main">
+                <img src="C:\Users\Hamza\Documents\cv\WhatsApp Image 2024-03-08 at 11.30.47 PM.jpeg" />
+                
+            </div>
+            
+           </div>
+        </div>
+    </section>
+    
+    <script>
+        const previous = document.querySelector('.previous');
+        const next = document.querySelector('.next');
+        const images = document.querySelector('.slider-carousel').children;
+        const totalImages = images. length;
+        let currentIndex = 0;
+
+        previous.addEventListener('click', ()=> {
+            previousImage()
+        })
+        next.addEventListener('click', () => {
+            nextImage();
+        })
+
+        setInterval(()=>{
+            nextImage();
+        },1000);
+
+        function nextImage(){
+            images[currentIndex].classList.remove('main');
+             if(currentIndex == totalImages-1){
+                currentIndex = 0;
+             }
+             else{
+                currentIndex++;
+             }
+             images[currentIndex].classList.add('main');
+        }
+
+        function previousImage(){
+            images[currentIndex].classList.remove('main');
+            if(currentIndex == 0){
+                currentIndex = totalImages-1;
+            }
+            else{
+                currentIndex--;
+            }
+            images[currentIndex].classList.add(main);
+        }
+    </script>
+</body>
+</html>
